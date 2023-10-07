@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="calculadora2.php" method="POST">
-        <input type="number" name="operador1" value="" placeholder="operando1">
-        <input type="number" name="operador2" value="" placeholder="operando2">
+        <input type="number" name="operador1" value="" placeholder="Primer Numero">
+        <input type="number" name="operador2" value="" placeholder="Segundo Numero">
         <select name="operacion" id="operacion">
             <option value="Sumar">Sumar</option>
             <option value="Restar">Restar</option>
