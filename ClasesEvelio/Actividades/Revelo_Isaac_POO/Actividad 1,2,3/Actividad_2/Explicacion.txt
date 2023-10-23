@@ -1,0 +1,7 @@
+El script tiene una funcionalidad de ser
+como un carro de compras, ya que permite a
+las personas seleccionar algun producto de su interes,
+agregarlo y realizar el pedido. Pero este solo tiene
+funcionalidades basicas, ya que para una aplicacion
+real se necesitaria de muchas cosas mas para garantizar
+su correcto uso.
