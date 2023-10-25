@@ -10,11 +10,13 @@ package aplicacion1.isaac;
  */
 public class calculadora extends javax.swing.JFrame {
 
-    /**
-     * Creates new form calculadora
-     */
+    public float num1;
+    public float num2;
+    public String operador;
+    
     public calculadora() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -130,6 +132,11 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         igual.setText("=");
+        igual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                igualActionPerformed(evt);
+            }
+        });
 
         b8.setText("8");
         b8.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +243,9 @@ public class calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-        pantalla.setText(pantalla.getText()+"+");
+        this.num1=Float.parseFloat(this.pantalla.getText());
+        this.operador="+";
+        this.pantalla.setText("");
     }//GEN-LAST:event_sumaActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
@@ -280,16 +289,33 @@ public class calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_b3ActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
-        pantalla.setText(pantalla.getText()+"-");
+        this.num1=Float.parseFloat(this.pantalla.getText());
+        this.operador="-";
+        this.pantalla.setText("");
     }//GEN-LAST:event_restaActionPerformed
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
-        pantalla.setText(pantalla.getText()+"*");
+        this.num1=Float.parseFloat(this.pantalla.getText());
+        this.operador="*";
+        this.pantalla.setText("");
     }//GEN-LAST:event_multiplicacionActionPerformed
 
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
-        pantalla.setText(pantalla.getText()+"/");
+        this.num1=Float.parseFloat(this.pantalla.getText());
+        this.operador="/";
+        this.pantalla.setText("");
     }//GEN-LAST:event_divisionActionPerformed
+
+    private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
+        this.num2=Float.parseFloat(this.pantalla.getText());
+        
+        switch(this.operador){
+            case "+":this.pantalla.setText(Float.toString(this.num1+this.num2));break;
+            case "-":this.pantalla.setText(Float.toString(this.num1-this.num2));break;
+            case "*":this.pantalla.setText(Float.toString(this.num1*this.num2));break;
+            case "/":this.pantalla.setText(Float.toString(this.num1/this.num2));break;
+        }
+    }//GEN-LAST:event_igualActionPerformed
 
     /**
      * @param args the command line arguments
