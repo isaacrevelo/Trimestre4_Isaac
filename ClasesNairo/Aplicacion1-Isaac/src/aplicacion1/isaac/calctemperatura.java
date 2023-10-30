@@ -39,13 +39,13 @@ public class calctemperatura extends javax.swing.JFrame {
         b6 = new javax.swing.JButton();
         b3 = new javax.swing.JButton();
         b9 = new javax.swing.JButton();
-        igual = new javax.swing.JButton();
+        conversion = new javax.swing.JButton();
         b8 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         bborrar = new javax.swing.JButton();
         bdecimal = new javax.swing.JButton();
-        suma = new javax.swing.JButton();
-        suma1 = new javax.swing.JButton();
+        bcel = new javax.swing.JButton();
+        bfaren = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,10 +105,10 @@ public class calctemperatura extends javax.swing.JFrame {
             }
         });
 
-        igual.setText("Convertir a centigrados");
-        igual.addActionListener(new java.awt.event.ActionListener() {
+        conversion.setText("Convertir a celsius");
+        conversion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                igualActionPerformed(evt);
+                conversionActionPerformed(evt);
             }
         });
 
@@ -140,17 +140,17 @@ public class calctemperatura extends javax.swing.JFrame {
             }
         });
 
-        suma.setText("Centigrados");
-        suma.addActionListener(new java.awt.event.ActionListener() {
+        bcel.setText("celsius");
+        bcel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sumaActionPerformed(evt);
+                bcelActionPerformed(evt);
             }
         });
 
-        suma1.setText("Centigrados");
-        suma1.addActionListener(new java.awt.event.ActionListener() {
+        bfaren.setText("farenheit");
+        bfaren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                suma1ActionPerformed(evt);
+                bfarenActionPerformed(evt);
             }
         });
 
@@ -181,7 +181,7 @@ public class calctemperatura extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(suma1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(bfaren, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,8 +198,8 @@ public class calctemperatura extends javax.swing.JFrame {
                                         .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(igual, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                    .addComponent(suma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(conversion, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                                    .addComponent(bcel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addGap(40, 40, 40))
         );
         layout.setVerticalGroup(
@@ -232,11 +232,11 @@ public class calctemperatura extends javax.swing.JFrame {
                             .addComponent(bdecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
-                        .addComponent(suma1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bfaren, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bcel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
-                        .addComponent(igual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(conversion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(147, 147, 147))
         );
 
@@ -279,7 +279,7 @@ public class calctemperatura extends javax.swing.JFrame {
         pantalla.setText(pantalla.getText()+"3");
     }//GEN-LAST:event_b3ActionPerformed
 
-    private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
+    private void conversionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionActionPerformed
         this.num2=Float.parseFloat(this.pantalla.getText()); 
         
         switch(this.operador){
@@ -288,7 +288,7 @@ public class calctemperatura extends javax.swing.JFrame {
             case "*":this.pantalla.setText(Float.toString(this.num1*this.num2));break;
             case "/":this.pantalla.setText(Float.toString(this.num1/this.num2));break;
         }
-    }//GEN-LAST:event_igualActionPerformed
+    }//GEN-LAST:event_conversionActionPerformed
 
     private void bborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bborrarActionPerformed
         this.pantalla.setText("");
@@ -305,15 +305,13 @@ public class calctemperatura extends javax.swing.JFrame {
         pantalla.setText(pantalla.getText()+"9");
     }//GEN-LAST:event_b9ActionPerformed
 
-    private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-        this.num1=Float.parseFloat(this.pantalla.getText());
-        this.operador="+";
-        this.pantalla.setText("");
-    }//GEN-LAST:event_sumaActionPerformed
+    private void bcelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcelActionPerformed
+        pantalla.setText(pantalla.getText()+"°C");
+    }//GEN-LAST:event_bcelActionPerformed
 
-    private void suma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suma1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_suma1ActionPerformed
+    private void bfarenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bfarenActionPerformed
+        pantalla.setText(pantalla.getText()+"°F");
+    }//GEN-LAST:event_bfarenActionPerformed
     
     /**
      * @param args the command line arguments
@@ -363,10 +361,10 @@ public class calctemperatura extends javax.swing.JFrame {
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
     private javax.swing.JButton bborrar;
+    private javax.swing.JButton bcel;
     private javax.swing.JButton bdecimal;
-    private javax.swing.JButton igual;
+    private javax.swing.JButton bfaren;
+    private javax.swing.JButton conversion;
     private javax.swing.JTextField pantalla;
-    private javax.swing.JButton suma;
-    private javax.swing.JButton suma1;
     // End of variables declaration//GEN-END:variables
 }

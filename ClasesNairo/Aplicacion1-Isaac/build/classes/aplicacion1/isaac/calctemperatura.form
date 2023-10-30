@@ -50,7 +50,7 @@
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="suma1" max="32767" attributes="0"/>
+                              <Component id="bfaren" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -72,8 +72,8 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="igual" pref="166" max="32767" attributes="0"/>
-                                  <Component id="suma" max="32767" attributes="0"/>
+                                  <Component id="conversion" pref="166" max="32767" attributes="0"/>
+                                  <Component id="bcel" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -119,11 +119,11 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="suma1" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="bfaren" min="-2" pref="37" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="suma" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="bcel" min="-2" pref="37" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="igual" max="32767" attributes="0"/>
+                      <Component id="conversion" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
@@ -198,12 +198,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b9ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="igual">
+    <Component class="javax.swing.JButton" name="conversion">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Convertir a centigrados"/>
+        <Property name="text" type="java.lang.String" value="Convertir a celsius"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="igualActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conversionActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="b8">
@@ -238,20 +238,20 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bdecimalActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="suma">
+    <Component class="javax.swing.JButton" name="bcel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Centigrados"/>
+        <Property name="text" type="java.lang.String" value="celsius"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bcelActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="suma1">
+    <Component class="javax.swing.JButton" name="bfaren">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Centigrados"/>
+        <Property name="text" type="java.lang.String" value="farenheit"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="suma1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bfarenActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
