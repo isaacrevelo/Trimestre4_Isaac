@@ -13,7 +13,6 @@ import java.util.HashSet;
 public class calctemperatura extends javax.swing.JFrame {
 
     public float num1;
-    public float num2;
     public String operador;
     
     public calctemperatura() {
@@ -39,7 +38,7 @@ public class calctemperatura extends javax.swing.JFrame {
         b6 = new javax.swing.JButton();
         b3 = new javax.swing.JButton();
         b9 = new javax.swing.JButton();
-        conversion = new javax.swing.JButton();
+        converafaren = new javax.swing.JButton();
         b8 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         bborrar = new javax.swing.JButton();
@@ -105,10 +104,10 @@ public class calctemperatura extends javax.swing.JFrame {
             }
         });
 
-        conversion.setText("Convertir a celsius");
-        conversion.addActionListener(new java.awt.event.ActionListener() {
+        converafaren.setText("Convertir a farenheit");
+        converafaren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                conversionActionPerformed(evt);
+                converafarenActionPerformed(evt);
             }
         });
 
@@ -198,7 +197,7 @@ public class calctemperatura extends javax.swing.JFrame {
                                         .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(conversion, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                                    .addComponent(converafaren, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                                     .addComponent(bcel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addGap(40, 40, 40))
         );
@@ -236,7 +235,7 @@ public class calctemperatura extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bcel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
-                        .addComponent(conversion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(converafaren, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(147, 147, 147))
         );
 
@@ -279,16 +278,15 @@ public class calctemperatura extends javax.swing.JFrame {
         pantalla.setText(pantalla.getText()+"3");
     }//GEN-LAST:event_b3ActionPerformed
 
-    private void conversionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionActionPerformed
-        this.num2=Float.parseFloat(this.pantalla.getText()); 
-        
-        switch(this.operador){
-            case "+":this.pantalla.setText(Float.toString(this.num1+this.num2));break;
-            case "-":this.pantalla.setText(Float.toString(this.num1-this.num2));break;
-            case "*":this.pantalla.setText(Float.toString(this.num1*this.num2));break;
-            case "/":this.pantalla.setText(Float.toString(this.num1/this.num2));break;
-        }
-    }//GEN-LAST:event_conversionActionPerformed
+    private void converafarenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_converafarenActionPerformed
+        if (operador.equals("°F")) {
+        float tempFahrenheit = num1;
+        float tempCelsius = (tempFahrenheit - 32) * 5/9;
+        pantalla.setText(Float.toString(tempCelsius) + "°C");
+        operador = "°C";
+    }
+    System.out.println("Operador: " + operador);
+    }//GEN-LAST:event_converafarenActionPerformed
 
     private void bborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bborrarActionPerformed
         this.pantalla.setText("");
@@ -306,11 +304,28 @@ public class calctemperatura extends javax.swing.JFrame {
     }//GEN-LAST:event_b9ActionPerformed
 
     private void bcelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcelActionPerformed
-        pantalla.setText(pantalla.getText()+"°C");
+        String text = this.pantalla.getText();
+    String numericText = text.replaceAll("[^\\d.]", "");
+    if (!numericText.isEmpty()) {
+        this.num1 = Float.parseFloat(numericText);
+    } else {
+        this.num1 = 0;
+    }
+
+    this.operador = "°C";
+
     }//GEN-LAST:event_bcelActionPerformed
 
     private void bfarenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bfarenActionPerformed
-        pantalla.setText(pantalla.getText()+"°F");
+        String text = this.pantalla.getText();
+    String numericText = text.replaceAll("[^\\d.]", "");
+    if (!numericText.isEmpty()) {
+        this.num1 = Float.parseFloat(numericText);
+    } else {
+        this.num1 = 0;
+    }
+
+    this.operador = "°C";
     }//GEN-LAST:event_bfarenActionPerformed
     
     /**
@@ -364,7 +379,7 @@ public class calctemperatura extends javax.swing.JFrame {
     private javax.swing.JButton bcel;
     private javax.swing.JButton bdecimal;
     private javax.swing.JButton bfaren;
-    private javax.swing.JButton conversion;
+    private javax.swing.JButton converafaren;
     private javax.swing.JTextField pantalla;
     // End of variables declaration//GEN-END:variables
 }

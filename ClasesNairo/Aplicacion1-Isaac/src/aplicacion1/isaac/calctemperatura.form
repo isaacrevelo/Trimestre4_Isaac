@@ -72,7 +72,7 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="conversion" pref="166" max="32767" attributes="0"/>
+                                  <Component id="converafaren" pref="166" max="32767" attributes="0"/>
                                   <Component id="bcel" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -123,7 +123,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="bcel" min="-2" pref="37" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="conversion" max="32767" attributes="0"/>
+                      <Component id="converafaren" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
@@ -198,12 +198,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b9ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="conversion">
+    <Component class="javax.swing.JButton" name="converafaren">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Convertir a celsius"/>
+        <Property name="text" type="java.lang.String" value="Convertir a farenheit"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conversionActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="converafarenActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="b8">
